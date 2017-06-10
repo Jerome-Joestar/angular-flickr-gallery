@@ -1,9 +1,7 @@
 <div>
-  <label for="sort_photo">Sort By</label>
-  <select name="sort_photo" id="sort_photo">
-    <option value="date">By Date2</option>
-    <option value="alpha">Alphabetical A-Z</option>
-    <option value="omega">Alphabetical Z-A</option>
-    <option value="Me">Me</option>
-  </select>
+  <md-select placeholder="Favorite food">
+    <md-option *ngFor="let option of filterOptions" [value]="option.value">
+      {{ option.viewValue }}
+    </md-option>
+  </md-select>
 </div>
