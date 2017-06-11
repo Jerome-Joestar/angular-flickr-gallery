@@ -8,6 +8,7 @@ import {MdToolbarModule} from '@angular/material';
 })
 export class HeaderComponent implements OnInit {
 
+  headerTitle = 'Flicker Gallery';
   constructor() { }
 
   ngOnInit() {
