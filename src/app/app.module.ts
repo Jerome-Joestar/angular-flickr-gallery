@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdToolbarModule, MaterialModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -28,8 +27,6 @@ import { GridComponent } from './filter-bar/grid/grid.component';
     BrowserAnimationsModule,
     FlexLayoutModule,
     FormsModule,
-    MaterialModule,
-    MdToolbarModule,
     ReactiveFormsModule
 
   ],

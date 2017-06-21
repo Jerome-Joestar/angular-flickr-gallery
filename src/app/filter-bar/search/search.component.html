@@ -1,10 +1,10 @@
 <div>
-  <md-select placeholder="Search Type">
-    <md-option *ngFor="let option of searchTypes" [value]="option.value">
+  <select placeholder="Search Type">
+    <option *ngFor="let option of searchTypes" [value]="option.value">
       {{ option.viewValue }}
-    </md-option>
-  </md-select>
-  <md-input-container>
+    </option>
+  </select>
+  <div>
     <input mdInput placeholder="Costumes...">
-  </md-input-container>
+  </div>
 </div>
