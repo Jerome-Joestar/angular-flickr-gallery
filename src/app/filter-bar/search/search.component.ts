@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SelectDropDown } from '../../common classes/select-dropdown';
 
 @Component({
   selector: 'app-search',
@@ -9,11 +8,19 @@ import { SelectDropDown } from '../../common classes/select-dropdown';
 export class SearchComponent implements OnInit {
 
   searchTypes = [
-    new SelectDropDown('tag', 'Tag Name'),
-    new SelectDropDown('title', 'Title'),
-    new SelectDropDown('description', 'Description')
-  ]
-  constructor() { }
+    { name: 'Tag Name', value: 'tag' },
+    { name: 'Title', value: 'title' },
+    { name: 'Description', value: 'description'}
+  ];
+
+  filterOptions = [
+    { name: 'By Date', value: 'date' },
+    { name: 'Alphabetical A-Z', value: 'alpha' },
+    { name: 'Alphabetical Z-A', value: 'reversed' }
+  ];
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
