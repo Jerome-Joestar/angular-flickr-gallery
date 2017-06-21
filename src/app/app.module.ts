@@ -9,7 +9,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FilterBarComponent } from './filter-bar/filter-bar.component';
 import { SearchComponent } from './filter-bar/search/search.component';
-import { FilterComponent } from './filter-bar/filter/filter.component';
 import { GridComponent } from './filter-bar/grid/grid.component';
 
 @NgModule({
@@ -19,7 +18,6 @@ import { GridComponent } from './filter-bar/grid/grid.component';
     FooterComponent,
     FilterBarComponent,
     SearchComponent,
-    FilterComponent,
     GridComponent
   ],
   imports: [
