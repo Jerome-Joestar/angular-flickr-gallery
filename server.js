@@ -1,5 +1,4 @@
 // Get dependencies
-const config = require('./server/config');
 const express = require('express');
 const path = require('path');
 const http = require('http');
@@ -21,9 +20,9 @@ app.use(express.static(__dirname + '/dist'));
 app.use('/photos', photos);
 
 // Catch all other routes and return the index file
-/*app.get('*', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
-});*/
+});
 
 /**
  * Get port from environment and store in Express.
