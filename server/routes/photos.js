@@ -1,11 +1,10 @@
 const express = require('express');
-const config = require('../config');
 const router = express.Router();
 let FlickerAPI = require('flickrapi');
 const flickrOptions = {
-  api_key: config.apiKey,
-  secret: config.apiSecret,
-  user_id: config.userID,
+  api_key: process.env.apiKey,
+  secret: process.env.apiSecret,
+  user_id: process.env.userID,
   progress: false
 };
 
