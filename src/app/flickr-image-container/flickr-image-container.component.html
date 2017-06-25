@@ -1,5 +1,5 @@
-<ul>
-  <li *ngFor="let photo of photos">
-    {{photo.id}}
+<ul class="row">
+  <li *ngFor="let photo of photos" class="col s6">
+    <img [src]="photo" alt="Sample Image">
   </li>
 </ul>

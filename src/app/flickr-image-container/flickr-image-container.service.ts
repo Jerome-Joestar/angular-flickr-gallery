@@ -9,7 +9,7 @@ export class FlickrImageContainerService {
   constructor(private http: Http) { }
 
   getPhotos() {
-    return this.http.get('/api').map(res => res.json());
+    return this.http.get('/photos').map(res => res.json());
   }
 
 }

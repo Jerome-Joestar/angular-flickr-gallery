@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
       flickr.people.getPublicPhotos({
         user_id: flickr.options.user_id,
         page: 1,
-        per_page: 20
+        per_page: 300
       }, function(err, result) {
         if(err){
           console.log(err)
