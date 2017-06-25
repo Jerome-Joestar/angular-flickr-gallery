@@ -1,4 +1,5 @@
 const express = require('express');
+const config = require('../config');
 const router = express.Router();
 let FlickerAPI = require('flickrapi');
 const flickrOptions = {
