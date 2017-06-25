@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "heroku-prebuild": "npm install -g http-server",
     "heroku-postbuild": "ng build --prod",
-    "start": "ng build && nodemon server.js"
+    "start": "http-server dist/ && node server.js"
   },
   "private": true,
   "dependencies": {
