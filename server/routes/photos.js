@@ -1,10 +1,13 @@
 const express = require('express');
 const router = express.Router();
 let FlickerAPI = require('flickrapi');
+/*const config = require('../config');*/
+
+//TODO Need to use destructuring here to clean up code
 const flickrOptions = {
-  api_key: process.env.apiKey,
-  secret: process.env.apiSecret,
-  user_id: process.env.userID,
+  api_key: process.env.apiKey || config.apiKey,
+  secret: process.env.apiSecret || config.apiSecret,
+  user_id: process.env.userID || config.userID,
   progress: false
 };
 
