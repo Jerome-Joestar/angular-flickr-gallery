@@ -12,7 +12,7 @@ export class FlickrImageContainerComponent implements OnInit {
   photos: string[];
 
   constructor(private flickrImageContainerService: FlickrImageContainerService) {
-    this.photos = [''];
+    this.photos = [];
   }
 
   ngOnInit() {
