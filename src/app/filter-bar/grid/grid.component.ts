@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GridService } from '../../services/grid.service';
 
 @Component({
   selector: 'app-grid',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GridComponent implements OnInit {
 
-  constructor() { }
+  constructor(private gridService: GridService) {}
 
   ngOnInit() {
+  }
+
+  updateGridValue(value){
+    this.gridService.setGridValue(value);
   }
 
 }

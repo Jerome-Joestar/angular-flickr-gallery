@@ -1,5 +1,11 @@
 <ul class="row">
-  <li *ngFor="let photo of photos" class="col s6">
-    <img [src]="photo" alt="Sample Image">
+  <li *ngFor="let photo of photos"
+      class="flickr-image-item-container col s12"
+      [ngClass]="{'m4': gridValue === '3', 'm3': gridValue === '4', 'm2': gridValue === '6'}">
+    <a [href]="photo.url_l" class="flickr-image-overlay">
+      <img class="flickr-image-item" [src]="photo.url_l" alt="photo.title">
+    </a>
   </li>
 </ul>
+
+

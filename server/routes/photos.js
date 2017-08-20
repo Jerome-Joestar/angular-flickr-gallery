@@ -14,22 +14,26 @@ const flickrOptions = {
 /* GET api listing. */
 router.get('/', (req, res) => {
 
-  FlickerAPI.tokenOnly(flickrOptions, function(error, flickr) {
-    if(error){
+  FlickerAPI.tokenOnly(flickrOptions, function (error, flickr) {
+    if (error) {
       console.log(error)
     }
-    else{
+    else {
       flickr.people.getPublicPhotos({
         user_id: flickr.options.user_id,
         page: 1,
-        per_page: 300
-      }, function(err, result) {
-        if(err){
+        per_page: 500,
+        extras: [ 'original_format', 'url_l' ]
+      }, function (err, result) {
+        if (err) {
           console.log(err)
         }
-        else{
+        else {
+          const filteredResults = result.photos.photo.filter(photo => {
+            return photo.height_l > photo.width_l;
+          });
           res.setHeader('Content-Type', 'application/json');
-          res.json(result.photos.photo)
+          res.json(filteredResults)
         }
       });
     }

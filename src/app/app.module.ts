@@ -13,6 +13,8 @@ import { SearchComponent } from './filter-bar/search/search.component';
 import { GridComponent } from './filter-bar/grid/grid.component';
 import { FlickrImageContainerComponent } from './flickr-image-container/flickr-image-container.component';
 
+import { GridService} from './services/grid.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,7 @@ import { FlickrImageContainerComponent } from './flickr-image-container/flickr-i
     ReactiveFormsModule
 
   ],
-  providers: [],
+  providers: [GridService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
